@@ -4,4 +4,4 @@ project(advent_of_code)
 set(CMAKE_CXX_STANDARD 23)
 
 add_executable(advent_of_code
-        day-1/historian_hysteria.cpp)
+        day-2/red_nosed_report_2.cpp)
