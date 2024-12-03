@@ -4,4 +4,4 @@ project(advent_of_code)
 set(CMAKE_CXX_STANDARD 23)
 
 add_executable(advent_of_code
-        day-2/red_nosed_report_2.cpp)
+        day-3/mull_it_over.cpp)
