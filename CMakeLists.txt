@@ -4,4 +4,4 @@ project(advent_of_code)
 set(CMAKE_CXX_STANDARD 23)
 
 add_executable(advent_of_code
-        day-3/mull_it_over_2.cpp)
+        day-4/ceres_search.cpp)
