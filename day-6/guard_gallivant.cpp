@@ -50,6 +50,11 @@ int main() {
         }
     }
 
+    for(auto it:arr) {
+        for(auto i:it) cout<<i;
+        cout<<endl;
+    }
+
     //answer might be count+1 !
     cout<<count<<endl;
 }
