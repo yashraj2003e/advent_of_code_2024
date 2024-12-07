@@ -4,4 +4,4 @@ project(advent_of_code)
 set(CMAKE_CXX_STANDARD 23)
 
 add_executable(advent_of_code
-        day-7/bridge_repair.cpp)
+        day-7/bridge_repair_2.cpp)

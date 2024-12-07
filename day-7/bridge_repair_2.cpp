@@ -5,19 +5,14 @@ vector<long long int> nums;
 long long int n;
 
 bool canMake(long long int i, long long int cur) {
-    if (cur > n || cur <= 0) {
-        return false;
-    }
+    if (cur > n || cur <= 0) return false;
+    if (i >= nums.size() && cur == n) return true;
+    if (i >= nums.size()) return false;
 
-    if (i >= nums.size() && cur == n) {
-        return true;
-    }
-
-    if (i >= nums.size()) {
-        return false;
-    }
-
-    return canMake(i + 1, cur + nums[i]) || canMake(i + 1, cur * nums[i]);
+    if(canMake(i + 1, cur + nums[i])) return true;
+    if(canMake(i + 1, cur * nums[i])) return true;
+    if(canMake(i+1,stoll(to_string(cur)+to_string(nums[i])))) return true;
+    return false;
 }
 
 bool check() {
