@@ -1,9 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
-vector<vector<char>> arr(50,vector<char>(50,'.'));
+vector<vector<char>> arr(10,vector<char>(10,'.'));
 int check(int a,int b,int c,int d) {
-    int e = a>=0 && a<50 && b>=0 && b<50;
-    int f = c>=0 && c<50 && d>=0 && d<50;
+    int e = a>=0 && a<10 && b>=0 && b<10;
+    int f = c>=0 && c<10 && d>=0 && d<10;
     if(e && arr[a][b]=='#') e--;
     if(f && arr[c][d]=='#') f--;
 
@@ -21,8 +21,8 @@ int main() {
 #endif
     unordered_map<char,vector<vector<int>>> mymap;
     char d;
-    for(int i=0;i<50;i++) {
-        for(int j=0;j<50;j++) {
+    for(int i=0;i<10;i++) {
+        for(int j=0;j<10;j++) {
           cin>>d;
           if(d!='.') {
               arr[i][j] = d;
