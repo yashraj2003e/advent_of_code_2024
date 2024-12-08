@@ -26,6 +26,7 @@ bool check() {
 }
 
 signed main() {
+    clock_t z = clock();
 #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
@@ -43,10 +44,11 @@ signed main() {
             n = stoll(match[1]);
             string others = match[2];
             long long int cur = 0;
-
+            long long int total = 0;
             for (char other : others) {
                 if (other == ' ') {
                     nums.push_back(cur);
+                    total+=cur;
                     cur = 0;
                     continue;
                 }
@@ -54,12 +56,14 @@ signed main() {
             }
 
             if (cur != 0) {
+                total+=cur;
                 nums.push_back(cur);
             }
-
+            if(total>n) continue;
             if (check()) answer += n;
         }
     }
 
     cout << to_string(answer) << endl;
+    cerr << "Run Time : " << ((double)(clock() - z) / CLOCKS_PER_SEC);
 }

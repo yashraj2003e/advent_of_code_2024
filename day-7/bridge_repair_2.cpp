@@ -8,7 +8,6 @@ bool canMake(long long int i, long long int cur) {
     if (cur > n || cur <= 0) return false;
     if (i >= nums.size() && cur == n) return true;
     if (i >= nums.size()) return false;
-
     if(canMake(i + 1, cur + nums[i])) return true;
     if(canMake(i + 1, cur * nums[i])) return true;
     if(canMake(i+1,stoll(to_string(cur)+to_string(nums[i])))) return true;
@@ -21,6 +20,7 @@ bool check() {
 }
 
 signed main() {
+    clock_t z = clock();
 #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
@@ -52,9 +52,11 @@ signed main() {
                 nums.push_back(cur);
             }
 
+
             if (check()) answer += n;
         }
     }
 
     cout << to_string(answer) << endl;
+    cerr << "Run Time : " << ((double)(clock() - z) / CLOCKS_PER_SEC);
 }
