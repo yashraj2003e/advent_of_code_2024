@@ -4,4 +4,4 @@ project(advent_of_code)
 set(CMAKE_CXX_STANDARD 23)
 
 add_executable(advent_of_code
-        day-9/disk_fragmenter.cpp)
+        day-9/disk_fragmenter_2.cpp)
