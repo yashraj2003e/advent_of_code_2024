@@ -49,9 +49,4 @@ int main() {
     }
 
     cout<<arr.size();
-
-
-
-
-
 }
