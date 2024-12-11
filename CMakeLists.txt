@@ -4,4 +4,4 @@ project(advent_of_code)
 set(CMAKE_CXX_STANDARD 23)
 
 add_executable(advent_of_code
-        day-10/hoof_it.cpp)
+        day-11/plutonian_pebbles.cpp)
